@@ -1,0 +1,63 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+// Animations Nuinalp Design Language
+
+//
+// Animations for moviment 
+// 
+
+.transition-moviment {
+  transition: $transtion-moviment $transtion-speed-moviment;
+}
+
+
+//
+// Animations for input and exit
+// 
+
+.transition-exit {
+  transition: $transtion-exit $transtion-speed-exit;
+}
+
+.transition-input {
+  transition: $transtion-input $transtion-speed-input;
+}
+
+// Remove animation
+
+.transition-none {
+  transition: none;
+}
+
+// Progressbars
+@keyframes progressbarAnim {
+  0% { background-position: 0 0; }
+  100% { background-position: -15rem 0; }
+}
+
+@keyframes loadingProgressbar {
+  0% { transform: translateX(-89%); }
+  50% { transform: translateX(189%); }
+  100% { transform: translateX(-89%); }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.page-fade-out {
+  animation: fadeOut cubic-bezier(0.93, 0, 1, 0.27) 150ms;
+  animation-fill-mode: forwards;
+}

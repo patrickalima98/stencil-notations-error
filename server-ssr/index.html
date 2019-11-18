@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/nuiverse-ui/dist/nuiverse-ui/nuiverse-ui.css">
+  <script type="module">
+    import {
+      applyPolyfills,
+      defineCustomElements,
+    } from '/nuiverse-ui/loader/index.mjs';
+    applyPolyfills().then(() => {
+      defineCustomElements(window);
+    });
+  </script>
+</head>
+<body>
+  <div class="nv-d-block nv-py-4">
+    <nv-list>
+      <nv-list-item text-title="Alarm 1">
+        <span>4:34AM</span>
+      </nv-list-item>
+      <nv-list-item text-title="Alarm 2">
+        <span>8:30AM</span>
+      </nv-list-item>
+      <nv-list-item text-title="Alarm 3">
+        <nv-switch></nv-switch>
+      </nv-list-item>
+    </nv-list>
+  </div>
+</body>
+</html>

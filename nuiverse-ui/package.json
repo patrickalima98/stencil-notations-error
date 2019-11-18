@@ -1,0 +1,36 @@
+{
+  "name": "nuiverse-ui",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/nuiverse-ui/nuiverse-ui.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "^1.8.1",
+    "@stencil/postcss": "^1.0.1",
+    "@stencil/sass": "^1.1.1",
+    "@types/autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.7.1",
+    "stylelint": "^12.0.0",
+    "stylelint-config-recommended-scss": "^4.0.0",
+    "stylelint-config-sass-guidelines": "^6.1.0",
+    "stylelint-scss": "^3.12.1"
+  },
+  "license": "MIT"
+}

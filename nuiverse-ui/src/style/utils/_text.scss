@@ -1,0 +1,101 @@
+/**
+* Copyright (c) 2018 - 2019 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+//
+// Text
+//
+
+// Alignment
+
+.nv-txt-justify { text-align: justify !important; }
+.nv-txt-nowrap { white-space: nowrap !important; }
+
+.nv-txt-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nv-txt-left { text-align: left !important; }
+.nv-txt-right { text-align: right !important; }
+.nv-txt-center { text-align: center !important; }
+
+//
+// Transformation
+//
+
+.nv-txt-lowercase { text-transform: lowercase !important; }
+.nv-txt-uppercase { text-transform: uppercase !important; }
+.nv-txt-capitalize { text-transform: capitalize !important; }
+
+//
+// Weight and italics
+//
+
+.nv-font-regular { font-family: 'FiraGO Regular' !important; }
+.nv-font-bold { font-family: 'FiraGO Bold' !important; }
+.nv-font-bold-italic { font-family: 'FiraGO Bold Italic' !important; }
+.nv-font-italic { font-family: 'FiraGO Italic' !important; }
+.nv-font-medium-italic { font-family: 'FiraGO Medium Italic' !important; }
+.nv-font-light { font-family: 'FiraGO Light' !important; }
+.nv-font-light-italic { font-family: 'FiraGO Light Italic' !important; }
+.nv-font-monospace { font-family: 'Fira Code', monospace !important; }
+
+.nv-txt-muted { color: $text-muted !important; }
+
+//
+// Hide text
+//
+
+.nv-txt-hide {
+  @include text-hide;
+}
+
+//
+// Responsive
+// 
+
+@include xsm() {
+  .nv-txt-xsm-left { text-align: left !important; }
+  .nv-txt-xsm-right { text-align: right !important; }
+  .nv-txt-xsm-center { text-align: center !important; }
+}
+
+@include sm() {
+  .nv-txt-sm-left { text-align: left !important; }
+  .nv-txt-sm-right { text-align: right !important; }
+  .nv-txt-sm-center { text-align: center !important; }
+}
+
+@include md() {
+  .nv-txt-md-left { text-align: left !important; }
+  .nv-txt-md-right { text-align: right !important; }
+  .nv-txt-md-center { text-align: center !important; }
+}
+
+@include lg() {
+  .nv-txt-lg-left { text-align: left !important; }
+  .nv-txt-lg-right { text-align: right !important; }
+  .nv-txt-lg-center { text-align: center !important; }
+}
+
+@include xl() {
+  .nv-txt-xl-left { text-align: left !important; }
+  .nv-txt-xl-right { text-align: right !important; }
+  .nv-txt-xl-center { text-align: center !important; }
+}
+
+@include xxl() {
+  .nv-txt-xxl-left { text-align: left !important; }
+  .nv-txt-xxl-right { text-align: right !important; }
+  .nv-txt-xxl-center { text-align: center !important; }
+}
+
+@include xxxl() {
+  .nv-txt-xxxl-left { text-align: left !important; }
+  .nv-txt-xxxl-right { text-align: right !important; }
+  .nv-txt-xxxl-center { text-align: center !important; }
+}

@@ -1,0 +1,231 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+// stylelint-disable selector-no-qualifying-type
+
+// Based on the 4 point grid.
+
+/*
+h1 - 40/44
+h2 - 36/40
+h3 - 32/36
+h4 - 28/32
+h5 - 24/28
+h6 - 20/24
+base - 16/20
+*/
+
+html { 
+  font-size: 16px;
+  line-height: 20px;
+}
+
+body {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 auto;
+}
+
+.nv-h1,
+h1 {
+  font-family: 'FiraGO Light';
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.nv-h2,
+h2 {
+  font-family: 'FiraGO Light';
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.nv-h3,
+h3 {
+  font-family: 'FiraGO Regular';
+  font-size: 32px;
+  line-height: 36px;
+}
+
+blockquote,
+.nv-blockquote {
+  font-family: 'FiraGO Italic';
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.nv-h4,
+h4 {
+  font-family: 'FiraGO Regular';
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.nv-h5,
+h5 {
+  font-family: 'FiraGO Regular';
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.nv-h6,
+h6 {
+  font-family: 'FiraGO Medium';
+  font-size: 20px;
+  line-height: 24px;
+}
+
+//
+//Heading
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nv-h1,
+.nv-h2,
+.nv-h3,
+.nv-h4,
+.nv-h5,
+.nv-h6 {
+  color: $default-color;
+  margin-bottom: $space-default;
+  margin-top: 0;
+}
+
+//
+// standout
+//
+
+.nv-lead {
+  font-family: 'FiraGO Light';
+  font-size: 20px;
+  line-height: 24px;
+}
+
+//
+// P
+//
+p,
+.nv-p {
+  margin-bottom: $space-default;
+  margin-top: $space-default;
+}
+
+.nv-small,
+small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+mark,
+.nv-mark {
+  background-color: $primary;
+  color: $white;
+  display: inline-block;
+}
+
+// Blockquotes
+.nv-blockquote {
+  font-size: $font-size-lg;
+  margin-bottom: $space-default;
+}
+
+.nv-blockquote-footer {
+  color: $default;
+  display: block;
+  font-size: 80%; // back to default font-size
+
+  &::before {
+    content: '\2014 \00A0'; // em dash, nbsp
+  }
+}
+
+//
+// Lists
+//
+
+.nv-list-inline {
+  // Inline turns list items into inline-block
+
+  list-style: none;
+
+  &:not(:last-child) {
+    margin-right: $space-sm;
+  }
+
+  .nv-list-inline-item {
+    display: inline-block;
+  }
+
+
+  @each $StyleId, $NameStyle in $style-list {
+    &.nv-list-style-#{$NameStyle} {
+      list-style: $NameStyle;
+      padding-left: 30px;
+    }
+  }
+
+  li {
+    margin-bottom: $space-sm;
+  }
+}
+
+code {
+  color: $primary;
+}
+
+//
+// Abbr
+//
+
+abbr,
+abbr[title],
+.nv-abbr,
+.nv-abbr[title] {
+  border-bottom: 1px dotted $default-color;
+  cursor: help;
+  text-decoration: none;
+}
+
+//
+// Defination list style
+//
+
+dl dt,
+.nv-dl .nv-dt {
+  font-weight: bold;
+  margin-bottom: $space-sm;
+}
+
+//
+// NUIverse hr style
+//
+
+hr,
+.nv-hr {
+  background-color: $dark;
+  border: 0;
+  border-color: $dark;
+  border-top-style: solid;
+  border-top-width: 1px;
+  margin: $space-lg 0;
+  opacity: 1;
+}
+
+b,
+strong {
+  font-family: 'FiraGO Bold';
+  font-weight: normal;
+}
+
+em {
+  font-family: 'FiraGO Italic';
+  font-style: normal;
+}

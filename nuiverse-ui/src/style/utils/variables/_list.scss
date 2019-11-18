@@ -1,0 +1,42 @@
+/**
+* Copyright (c) 2019 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+// stylelint-disable function-parentheses-space-inside
+
+//
+// List
+//
+
+$style-list: ();
+$style-list: map-merge(
+  (
+    '1':  armenian,
+    '2':  cjk-ideographic,
+    '3':  decimal,
+    '4':  decimal-leading-zero,
+    '5':  georgian,
+    '6':  hebrew,
+    '7':  hiragana,
+    '8':  hiragana-iroha,
+    '9':  katakana,
+    '10': katakana-iroha,
+    '11': lower-alpha,
+    '12': lower-greek,
+    '13': lower-latin,
+    '14': lower-roman,
+    '15': none,
+    '16': upper-alpha,
+    '17': upper-greek,
+    '18': upper-latin,
+    '19': upper-roman,
+    '20': initial,
+    '21': disc,
+    '22': circle,
+    '23': none,
+    '24': square,
+  ),
+  $style-list
+);

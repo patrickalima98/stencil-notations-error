@@ -1,0 +1,122 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+.nv-float-left {
+  @include float-left;
+}
+
+.nv-float-right {
+  @include float-right;
+}
+
+.nv-float-none {
+  @include float-none;
+}
+
+//
+// Responsive
+//
+
+@include xsm() {
+  .nv-float-xsm-left {
+    @include float-left;
+  }
+
+  .nv-float-xsm-right {
+    @include float-right;
+  }
+
+  .nv-float-xsm-none {
+    @include float-none;
+  }
+}
+
+@include sm() {
+  .nv-float-sm-left {
+    @include float-left;
+  }
+
+  .nv-float-sm-right {
+    @include float-right;
+  }
+
+  .nv-float-sm-none {
+    @include float-none;
+  }
+}
+
+@include md() {
+  .nv-float-md-left {
+    float: left !important;
+  }
+
+  .nv-float-md-right {
+    float: right !important;
+  }
+
+  .nv-float-md-none {
+    float: none !important;
+  }
+
+}
+
+@include lg() {
+  .nv-float-lg-left {
+    float: left !important;
+  }
+
+  .nv-float-lg-right {
+    float: right !important;
+  }
+
+  .nv-float-lg-none {
+    float: none !important;
+  }
+
+}
+
+@include xl() {
+  .nv-float-xl-left {
+    float: left !important;
+  }
+
+  .nv-float-xl-right {
+    float: right !important;
+  }
+
+  .nv-float-xl-none {
+    float: none !important;
+  }
+
+}
+
+@include xxl() {
+  .nv-float-xxl-left {
+    float: left !important;
+  }
+
+  .nv-float-xxl-right {
+    float: right !important;
+  }
+
+  .nv-float-xxl-none {
+    float: none !important;
+  }
+}
+
+@include xxxl() {
+  .nv-float-xxxl-left {
+    float: left !important;
+  }
+
+  .nv-float-xxxl-right {
+    float: right !important;
+  }
+
+  .nv-float-xxxl-none {
+    float: none !important;
+  }
+}

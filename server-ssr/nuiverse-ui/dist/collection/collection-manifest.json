@@ -1,0 +1,14 @@
+{
+  "entries": [
+    "components\\nv-list-item\\nv-list-item.js",
+    "components\\nv-list\\nv-list.js",
+    "components\\nv-switch\\nv-switch.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.8.1",
+    "typescriptVersion": "3.7.2"
+  },
+  "collections": [],
+  "bundles": []
+}

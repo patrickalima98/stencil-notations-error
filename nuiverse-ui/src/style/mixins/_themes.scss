@@ -1,0 +1,18 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+/**
+* @param nv-prefix, is used to create a prefix for the class, like:
+* .nv-progress....
+*/
+@mixin themes($nv-prefix: '') {
+
+  @each $themeName, $themeColor in $theme-colors {
+    &.#{$nv-prefix}-#{$themeName} {
+      @content ($themeColor);
+    }
+  }
+}

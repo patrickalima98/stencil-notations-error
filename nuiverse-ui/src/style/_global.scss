@@ -1,0 +1,267 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+//
+// import
+//
+
+@import 'vendor/normalize';
+// Include normalize
+@include nuiverse-normalize;
+
+@font-face {
+  font-family: 'FiraGO Regular';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/FiraGO-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraGO Medium';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/FiraGO-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraGO Bold';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/FiraGO-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraGO Bold Italic';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/FiraGO-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraGO Italic';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/FiraGO-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraGO Medium Italic';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/FiraGO-MediumItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraGO Light';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/FiraGO-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FiraGO Light Italic';
+  font-weight: 400;
+  src: url('../collection/assets/fonts/FiraGO-LightItalic.woff') format('woff');
+}
+
+//
+// Default html style
+//
+html {
+  box-sizing: border-box;
+  font-size: $font-size-global;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Default body style
+body {
+  background-color: $body-default-color;
+  color: $body-font-color;
+  font-family: $body-font-family;
+  font-weight: $global-weight-normal;
+  height: 100%;
+  line-height: $global-line-height;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+// Button global style
+button {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  cursor: default;
+  line-height: 1;
+  outline: none;
+  padding: 0;
+}
+
+// Make sure textarea takes on height automatically
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+// Make select elements are 100% width by default
+select {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+// Prevent text overflow on pre
+pre {
+  overflow: auto;
+}
+
+// Extra
+
+// Make reset inherit font-family instead of settings sans-serif
+button,
+input,
+optgroup,
+select,
+textarea {
+  outline: none;
+}
+
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul,
+span {
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+// Inputs
+
+/* stylelint-disable */
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='file'],
+textarea {
+  background-color: #f5f5f5;
+  // border-color: #cbcbcb;
+  // border-style: solid;
+  border-width: 0px;
+  padding: $space-default;
+  font-family: 'FiraGo Regular';
+
+  &::placeholder {
+    color: #aab2ba;
+    font-family: 'FiraGo Italic';
+    opacity: 1;
+  }
+}
+
+select,
+.custom-file-label {
+  background-color: #fafafa;
+  border-color: #cbcbcb;
+  border-style: solid;
+  border-width: 1px;
+  color: #5f5f5f;
+  font-style: italic;
+  opacity: 1;
+  padding: $space-default;
+
+
+  &:focus,
+  &:active {
+    background-color: $white;
+    border-color: $primary;
+  }
+}
+
+/* stylelint-enable */
+
+label {
+  display: inline-block;
+  margin-bottom: $space-sm;
+}
+
+.small {
+  font-size: 12px;
+  padding: $space-sm !important;
+}
+
+.medium {
+  font-size: 12px;
+  padding: $space-md !important;
+}
+
+.large {
+  font-size: 12px;
+  padding: $space-lg !important;
+}
+
+.extra-large {
+  font-size: 12px;
+  padding: $space-big !important;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($primary, 10%);
+  }
+}

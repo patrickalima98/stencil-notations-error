@@ -1,0 +1,136 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+$siwtch-margin-edge: 7px;
+$switch-width: 22px;
+$switch-height: 12px;
+
+$switch-before-size: 20px;
+$switch-before-full-width: $switch-width + $siwtch-margin-edge;
+
+.nv-switch {
+  display: inline-block;
+  height: 34px;
+  margin-right: 10px;
+  padding: 6px 8px;
+  position: relative;
+  width: 40px;
+
+  label {
+    display: inline-block;
+    height: 100%;
+    margin-bottom: 4px;
+    position: relative;
+    right: -10px;
+    width: 100%;
+  }
+
+  input {
+    display: none;
+    height: 0;
+    opacity: 0;
+    outline: none;
+    visibility: hidden;
+    width: 0;
+  }
+
+  &.nv-switch-disabled {
+    opacity: 0.5;
+  }
+
+  .nv-slider {
+    background-color: $light-gray;
+    bottom: 0;
+    cursor: pointer;
+    height: 14px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &::before {
+      animation: switchOff cubic-bezier(0.76, 0, 0.16, 1.01) 200ms;
+      animation-fill-mode: forwards;
+      background-color: $dark-gray;
+      content: '';
+      height: $switch-before-size;
+      left: -$siwtch-margin-edge;
+      margin-top: -($switch-before-size / 2);
+      position: absolute;
+      top: 50%;
+      transition: cubic-bezier(0.76, 0, 0.16, 1.01) 200ms;
+      width: $switch-before-size;
+    }
+  }
+
+
+  input:checked + .nv-slider {
+    background-color: lighten($primary, 30%);
+  }
+
+  input:checked + .nv-slider::before {
+    background-color: $primary;
+  }
+
+  input:focus + .nv-slider {
+    box-shadow: 0 0 1px $primary;
+  }
+
+  input:checked + .nv-slider::before {
+    animation: switchOn cubic-bezier(0.76, 0, 0.16, 1.01) 200ms;
+    animation-fill-mode: forwards;
+    left: unset;
+    right: -7px;
+  }
+
+  .nv-slider::before {
+    border-radius: 50%;
+  }
+
+  //
+  // Global style with theme colors
+  //
+
+  @each $themeName, $value in $theme-colors {
+    &.nv-switch-#{$themeName} {
+      input:checked + .nv-slider {
+        background-color: lighten($value, 30%);
+      }
+
+      input:checked + .nv-slider::before {
+        background-color: $value;
+      }
+
+      input:focus + .nv-slider {
+        box-shadow: 0 0 1px $value;
+      }
+    }
+  }
+}
+
+@keyframes switchOn {
+  from {
+    width: $switch-before-full-width;
+  }
+
+  to {
+    width: $switch-before-size;
+  }
+}
+
+
+@keyframes switchOff {
+  from {
+    right: -$siwtch-margin-edge;
+    width: $switch-before-full-width;
+  }
+
+  to {
+    left: -$siwtch-margin-edge;
+    width: $switch-before-size;
+  }
+}

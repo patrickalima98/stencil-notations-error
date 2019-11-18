@@ -1,0 +1,111 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors.nv- All rights reserved.nv-
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.nv-
+*/
+
+// Spacing singleton.nv-
+// This make classes for more options of margins e paddings.nv-
+// .nv-m is for margin and .nv-p for padding.nv-
+
+/**
+* t - for classes that set margin-top or padding-top
+* b - for classes that set margin-bottom or padding-bottom
+* l - for classes that set margin-left or padding-left
+* r - for classes that set margin-right or padding-right
+* x - for classes that set both *-left and *-right
+* y - for classes that set both *-top and *-bottom
+*/
+
+@each $sizes, $valueSize in $spacers {
+
+  // Margins
+  .nv-m-#{$sizes} {
+    margin-bottom: $valueSize !important;
+    margin-left: $valueSize !important;
+    margin-right: $valueSize !important;
+    margin-top: $valueSize !important;
+  }
+
+  .nv-mb-#{$sizes},
+  .nv-my-#{$sizes} {
+    margin-bottom: $valueSize !important;
+  }
+
+  .nv-mt-#{$sizes},
+  .nv-my-#{$sizes} {
+    margin-top: $valueSize !important;
+  }
+
+  .nv-ml-#{$sizes},
+  .nv-mx-#{$sizes} {
+    margin-left: $valueSize !important;
+  }
+
+  .nv-mr-#{$sizes},
+  .nv-mx-#{$sizes} {
+    margin-right: $valueSize !important;
+  }
+
+  //Margin auto
+  .nv-mb-auto,
+  .nv-my-auto {
+    margin-bottom: auto !important;
+  }
+
+  .nv-mt-auto,
+  .nv-my-auto {
+    margin-top: auto !important;
+  }
+
+  .nv-ml-auto,
+  .nv-mx-auto {
+    margin-left: auto !important;
+  }
+
+  .nv-mr-auto,
+  .nv-mx-auto {
+    margin-right: auto !important;
+  }
+
+  //Paddings
+
+  .nv-p-#{$sizes} {
+    padding: $valueSize !important;
+  }
+
+  .nv-pb-#{$sizes},
+  .nv-py-#{$sizes} {
+    padding-bottom: $valueSize !important;
+  }
+
+  .nv-pt-#{$sizes},
+  .nv-py-#{$sizes} {
+    padding-top: $valueSize !important;
+  }
+
+  .nv-pl-#{$sizes},
+  .nv-px-#{$sizes} {
+    padding-left: $valueSize !important;
+  }
+
+  .nv-pr-#{$sizes},
+  .nv-px-#{$sizes} {
+    padding-right: $valueSize !important;
+  }
+
+  //Global Padding and margin
+
+  //Padding global
+  .nv-pg-#{$sizes} {
+    padding: $valueSize !important;
+  }
+
+  .nv-mg-#{$sizes} {
+    margin: $valueSize !important;
+  }
+}
+
+.nv-m-auto {
+  margin: auto;
+}

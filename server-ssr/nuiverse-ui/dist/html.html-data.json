@@ -1,0 +1,127 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "nv-list",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "email",
+          "description": "If `true`, the list will have a **email** style."
+        },
+        {
+          "name": "sticky-header",
+          "description": "If `true`, the header will have a sticky effect."
+        },
+        {
+          "name": "users",
+          "description": "If `true`, the list will have a **user** style."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "https://github.com/ionic-team/ionic/tree/master/core/src\\components\\nv-list\\nv-list.tsx"
+        }
+      ]
+    },
+    {
+      "name": "nv-list-item",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "company",
+          "description": "The company name used by **user** list."
+        },
+        {
+          "name": "first-name",
+          "description": "The first name used by **user** list."
+        },
+        {
+          "name": "last-name",
+          "description": "The last name used by **user** list."
+        },
+        {
+          "name": "text-message",
+          "description": "The message text used by **email** list"
+        },
+        {
+          "name": "text-stamp",
+          "description": "A stamp text for the message, used by **email** list."
+        },
+        {
+          "name": "text-subject",
+          "description": "The subject text used by **email** list."
+        },
+        {
+          "name": "text-subtitle",
+          "description": "The subtitle text's text for the list item."
+        },
+        {
+          "name": "text-title",
+          "description": "The text title for the list item."
+        },
+        {
+          "name": "unread",
+          "description": "If `true`, a small rounded element, will be displayed on the left of the list\nUsed by **email** list."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "https://github.com/ionic-team/ionic/tree/master/core/src\\components\\nv-list-item\\nv-list-item.tsx"
+        }
+      ]
+    },
+    {
+      "name": "nv-switch",
+      "description": {
+        "kind": "markdown",
+        "value": ""
+      },
+      "attributes": [
+        {
+          "name": "checked",
+          "description": "If `true`, the switch is checked."
+        },
+        {
+          "name": "color",
+          "description": "The color of the Switch.",
+          "values": [
+            {
+              "name": "danger"
+            },
+            {
+              "name": "primary"
+            },
+            {
+              "name": "secondary"
+            },
+            {
+              "name": "success"
+            },
+            {
+              "name": "warning"
+            }
+          ]
+        },
+        {
+          "name": "disabled",
+          "description": "If `true`, the user cannot interact with the Swicth."
+        }
+      ],
+      "references": [
+        {
+          "name": "Source code",
+          "url": "https://github.com/ionic-team/ionic/tree/master/core/src\\components\\nv-switch\\nv-switch.tsx"
+        }
+      ]
+    }
+  ]
+}

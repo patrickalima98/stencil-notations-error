@@ -1,0 +1,359 @@
+/**
+* Copyright (c) 2018 - 2019 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+// The Grid System factory
+// Used by NUIverse to create the correct number of columns.
+// It was also built to be included and function independently.
+
+// Global mixin for create the all number of columns.
+
+@mixin grid-system-factory() {
+
+
+  // 
+  // Grid columns
+  // 
+
+  @include xsm() {
+    .nv-grid-row {
+      &.nv-grid-xsm {
+        display: flex;
+      }
+
+      &.nv-grid-no-edge-margin {
+        .nv-grid-col {
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
+    }
+
+    .nv-grid-col {
+      &.nv-grid-xsm-full {
+        flex: none;
+        width: 100%;
+      }
+
+      &.nv-grid-xsm-half {
+        flex: none;
+        width: 50%;
+      }
+
+      &.nv-grid-xsm-smart {
+        flex: none;
+      }
+
+      @for $i from 1 through $grid-columns {
+        &.nv-grid-col-xsm-#{$i} {
+          flex: none;
+          width: percentage($i / $grid-columns);
+        }
+        
+        &.nv-grid-col-offset-xsm-#{$i} {
+          margin-left: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }
+
+  @include sm() {
+    .nv-grid-row {
+      &.nv-grid-sm {
+        display: flex;
+      }
+
+      &.nv-grid-no-edge-margin {
+        .nv-grid-col {
+          margin-left: 0;
+          margin-right: 0;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
+    }
+
+    .nv-grid-col {
+      &.nv-grid-sm-full {
+        flex: none;
+        width: 100%;
+      }
+
+      &.nv-grid-sm-half {
+        flex: none;
+        width: 50%;
+      }
+
+      &.nv-grid-sm-smart {
+        flex: none;
+      }
+
+      @for $i from 1 through $grid-columns {
+        &.nv-grid-col-sm-#{$i} {
+          flex: none;
+          width: percentage($i / $grid-columns);
+        }
+        
+        &.nv-grid-col-offset-sm-#{$i} {
+          margin-left: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }
+
+  @include md() {
+    .nv-grid-row {
+      &:not(.nv-grid-lg):not(.nv-grid-xl):not(.nv-grid-xxl):not(.nv-grid-xxxl) {
+        display: flex;
+      }
+    }
+    
+    .nv-grid-col {
+      &.nv-grid-full,
+      &.nv-grid-md-full {
+        flex: none;
+        width: 100%;
+      }
+
+      &.nv-grid-half,
+      &.nv-grid-md-half {
+        flex: none;
+        width: 50%;
+      }
+
+      &.nv-grid-smart,
+      &.nv-grid-md-smart {
+        flex: none;
+      }
+
+      @for $i from 1 through $grid-columns {
+        &.nv-grid-col-#{$i},
+        &.nv-grid-col-md-#{$i} {
+          flex: none;
+          width: percentage($i / $grid-columns);
+        }
+        
+        &.nv-grid-col-offset-#{$i},
+        &.nv-grid-col-offset-md-#{$i} {
+          margin-left: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }
+
+  @include lg() {
+    .nv-grid-row {
+      &:not(.nv-grid-md):not(.nv-grid-xl):not(.nv-grid-xxl):not(.nv-grid-xxxl) {
+        display: flex;
+      }
+    }
+    
+    .nv-grid-col {
+      &.nv-grid-lg-full {
+        flex: none;
+        width: 100%;
+      }
+
+      &.nv-grid-lg-half {
+        flex: none;
+        width: 50%;
+      }
+
+      &.nv-grid-lg-smart {
+        flex: none;
+      }
+
+      @for $i from 1 through $grid-columns {
+        &.nv-grid-col-lg-#{$i} {
+          flex: none;
+          width: percentage($i / $grid-columns);
+        }
+        
+        &.nv-grid-col-offset-lg-#{$i} {
+          margin-left: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }
+
+  
+  @include xl() {
+    .nv-grid-row {
+      &:not(.nv-grid-md):not(.nv-grid-lg):not(.nv-grid-xxl):not(.nv-grid-xxxl) {
+        display: flex;
+      }
+    }
+
+    .nv-grid-col {
+      &.nv-grid-xl-full {
+        flex: none;
+        width: 100%;
+      }
+
+      &.nv-grid-xl-half {
+        flex: none;
+        width: 50%;
+      }
+
+      &.nv-grid-xl-smart {
+        flex: none;
+      }
+
+      @for $i from 1 through $grid-columns {
+        &.nv-grid-col-xl-#{$i} {
+          flex: none;
+          width: percentage($i / $grid-columns);
+        }
+        
+        &.nv-grid-col-offset-xl-#{$i} {
+          margin-left: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }
+
+  @include xxl() {
+    .nv-grid-row {
+      &:not(.nv-grid-md):not(.nv-grid-lg):not(.nv-grid-xl):not(.nv-grid-xxxl) {
+        display: flex;
+      }
+    }
+
+    .nv-grid-col {
+      &.nv-grid-xxl-full {
+        flex: none;
+        width: 100%;
+      }
+
+      &.nv-grid-xxl-half {
+        flex: none;
+        width: 50%;
+      }
+
+      &.nv-grid-xxl-smart {
+        flex: none;
+      }
+
+      @for $i from 1 through $grid-columns {
+        &.nv-grid-col-xxl-#{$i} {
+          flex: none;
+          width: percentage($i / $grid-columns);
+        }
+        
+        &.nv-grid-col-offset-xxl-#{$i} {
+          margin-left: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }
+
+  @include xxxl() {
+    .nv-grid-row {
+      &:not(.nv-grid-md):not(.nv-grid-lg):not(.nv-grid-xl):not(.nv-grid-xxl) {
+        display: flex;
+      }
+    }
+
+    .nv-grid-col {
+      &.nv-grid-xxl-full {
+        flex: none;
+        width: 100%;
+      }
+
+      &.nv-grid-xxl-half {
+        flex: none;
+        width: 50%;
+      }
+
+      &.nv-grid-xxl-smart {
+        flex: none;
+      }
+
+      @for $i from 1 through $grid-columns {
+        &.nv-grid-col-xxl-#{$i} {
+          flex: none;
+          width: percentage($i / $grid-columns);
+        }
+        
+        &.nv-grid-col-offset-xxl-#{$i} {
+          margin-left: percentage($i / $grid-columns);
+        }
+      }
+    }
+  }
+
+  // 
+  // Grid row
+  //
+
+  .nv-grid-row {
+    margin-left: (-$space-default);
+    margin-right: (-$space-default);
+
+    &.nv-grid-full {
+      flex: none;
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: #{$space-default};
+    }
+
+    // Remove a margin from edges column
+
+    &.nv-grid-no-margin {
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0;
+
+      > .nv-grid-col {
+        margin: 0;
+        padding: 0 !important;
+      }
+    }
+
+    &.nv-grid-no-edge-margin {
+      margin-left: 0;
+      margin-right: 0;
+
+      > .nv-grid-col {
+        &:first-child {
+          margin-left: 0;
+          padding-left: 0 !important;
+        }
+
+        &:last-child {
+          margin-right: 0;
+          padding-right: 0 !important;
+        }
+      }
+    }
+
+    // Allow use multiples column
+    &.nv-grid-multiline {
+      flex-wrap: wrap;
+    }
+  }
+
+  // 
+  // Grid column
+  // 
+
+  .nv-grid-col {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: $space-default;
+
+    &.nv-grid-half {
+      flex: none;
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+
+
+@mixin anim-helper ($name, $type, $delay: 0s) {
+  @if ($type == 'input') {
+    animation-delay: $delay;
+    animation-duration: $transtion-speed-input;
+    animation-timing-function: $transtion-input;
+  }
+
+  @else if ($type == 'exit') {
+    animation-delay: $delay;
+    animation-duration: $transtion-speed-exit;
+    animation-timing-function: $transtion-exit;
+  }
+
+  @else {
+    animation-delay: $delay;
+    animation-duration: $transtion-speed-moviment;
+    animation-timing-function: $transtion-moviment;
+  }
+
+  animation-fill-mode: forwards;
+  animation-name: $name;
+}

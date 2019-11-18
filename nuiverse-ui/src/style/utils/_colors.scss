@@ -1,0 +1,35 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+//
+// Background colors
+//
+
+@each $colorName, $color in $theme-colors {
+  .nv-bg-#{$colorName} {
+    background-color: $color;
+    border-color: $color !important;
+  }
+}
+
+.bkg-transparent {
+  background: transparent !important;
+}
+
+//Colors for texts
+
+@each $themeName, $value in $theme-colors {
+  .nv-txt-#{$themeName} {
+    color: $value !important;
+
+    span,
+    p,
+    code,
+    pre [h-6] {
+      color: $value !important;
+    }
+  }
+}

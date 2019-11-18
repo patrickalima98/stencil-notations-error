@@ -1,0 +1,53 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+// Global colors
+$default: #d3d3d3;
+$primary: #0070c0;
+$secondary: #4a8ecb;
+$danger: #e23e32;
+$info: #7f7f7f;
+$warning: #ff9800;
+$success: #5dda23;
+$selected: #fff;
+$link: #fff;
+$dark: #1a1a1a;
+$black: #000;
+$white: #fff;
+$text-muted: #6c757d;
+$gray-text: #7c7c7c;
+$dark-gray: #6a7075;
+$light-gray: #c7c7c7ff;
+$panel-light: #e5e5e5;
+$default-chip-color: #f0f0f0;
+
+// Theme
+$default-color: #2e2e2e;
+$default-border-color: #aab2ba;
+
+// Body global style 
+$body-default-color: $white !default;
+
+// Themes
+// stylelint-disable function-parentheses-space-inside
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'default': $default,
+    'primary': $primary,
+    'secondary': $secondary,
+    'danger': $danger,
+    'info': $info,
+    'warning': $warning,
+    'success': $success,
+    'selected': $selected,
+    'link': $link,
+    'dark': $dark,
+    'black': $black,
+    'white': $white,
+  ),
+  $theme-colors
+);

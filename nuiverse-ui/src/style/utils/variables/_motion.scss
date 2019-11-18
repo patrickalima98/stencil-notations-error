@@ -1,0 +1,19 @@
+/**
+* Copyright (c) 2019 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+//
+// Animations
+//
+
+// Animations Type
+$transtion-moviment: cubic-bezier(0.76, 0, 0.16, 1.01);
+$transtion-exit: cubic-bezier(1, 0, 1, 1);
+$transtion-input: cubic-bezier(0, 0, 0, 1);
+
+// Animations Speed
+$transtion-speed-moviment: 500ms;
+$transtion-speed-exit: 150ms;
+$transtion-speed-input: 300ms;

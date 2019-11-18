@@ -1,0 +1,28 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+@mixin small() {
+  font-size: $font-size-sm;
+  padding: $space-sm;
+}
+
+// Medium style
+@mixin medium() {
+  font-size: $font-size-md;
+  padding: $space-md;
+}
+
+// Large style
+@mixin large() {
+  font-size: $font-size-lg;
+  padding: $space-lg;
+}
+
+// Extra large style
+@mixin big() {
+  font-size: $font-size-big;
+  padding: $space-big;
+}

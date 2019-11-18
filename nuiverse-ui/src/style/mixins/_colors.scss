@@ -1,0 +1,9 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+@mixin bkg-degrade($a, $direction:'to bottom') {
+  background-image: linear-gradient(#{$direction}, darken($a, 10%), lighten($a, 5%), $a);
+}

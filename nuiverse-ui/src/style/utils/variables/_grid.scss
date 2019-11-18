@@ -1,0 +1,30 @@
+/**
+* Copyright (c) 2019 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+// 
+// Global breakpoints
+//
+
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$global-breakpoints: (
+  xsm: 479px,
+  sm: 480px,
+  md: 640px,
+  lg: 1024px,
+  xl: 1140px,
+  xxl: 1366px,
+  xxxl: 1920px,
+) !default;
+
+// 
+// Grid columns
+//
+
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12;

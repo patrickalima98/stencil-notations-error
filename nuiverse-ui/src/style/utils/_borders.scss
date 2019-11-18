@@ -1,0 +1,83 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+// 
+// Add basic border
+//
+
+.nv-border {
+  border: $border-width solid $border-color !important;
+}
+
+.nv-border-top {
+  border-top: $border-width solid $border-color !important;
+}
+
+.nv-border-right {
+  border-right: $border-width solid $border-color !important;
+}
+
+.nv-border-bottom {
+  border-bottom: $border-width solid $border-color !important;
+}
+
+.nv-border-left {
+  border-left: $border-width solid $border-color !important;
+}
+
+//
+// Border-radius
+//
+
+.nv-border-rounded {
+  border-radius: $global-border-radius !important;
+}
+
+.nv-border-rounded-top {
+  border-top-left-radius: $global-border-radius !important;
+  border-top-right-radius: $global-border-radius !important;
+}
+
+.nv-border-rounded-right {
+  border-bottom-right-radius: $global-border-radius !important;
+  border-top-right-radius: $global-border-radius !important;
+}
+
+.nv-border-rounded-bottom {
+  border-bottom-left-radius: $global-border-radius !important;
+  border-bottom-right-radius: $global-border-radius !important;
+}
+
+.nv-border-rounded-left {
+  border-bottom-left-radius: $global-border-radius !important;
+  border-top-left-radius: $global-border-radius !important;
+}
+
+
+//
+// Remove border
+//
+.nv-border-0 { border: 0 !important; }
+.nv-border-top-0 { border-top: 0 !important; }
+.nv-border-right-0 { border-right: 0 !important; }
+.nv-border-bottom-0 { border-bottom: 0 !important; }
+.nv-border-left-0 { border-left: 0 !important; }
+
+@each $colorName, $color in $theme-colors {
+  .nv-border-#{$colorName} {
+    border-color: $color !important;
+  }
+}
+
+.nv-border-transparent {
+  border-color: transparent !important;
+}
+
+//Remove paddings
+.nv-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

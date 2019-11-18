@@ -1,0 +1,272 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+.nv-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  list-style: none;
+  margin-bottom: 0;
+  overflow-y: auto;
+  padding-left: 0;
+
+  // Add position relative for get corret offsetTop 
+  // position from header elements
+  .nv-list-container {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .nv-list-title {
+    color: $dark;
+    display: block;
+    font-size: 18px;
+    
+    &:empty {
+      display: none;
+    }
+  }
+
+  .nv-list-first-name {
+    color: $dark;
+    display: inline-block;
+    font-family: 'FiraGO Bold';
+    font-size: 18px;
+    white-space: pre-wrap;
+  }
+
+  .nv-list-last-name {
+    color: $dark;
+    display: unset;
+    font-size: 18px;
+    white-space: pre-wrap;
+  }
+
+  .nv-list-company {
+    color: $dark-gray;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+
+  .nv-list-sub-title {
+    color: #878787;
+    display: block;
+    font-size: 16px;
+    margin-top: $space-sm;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .nv-list-sub-header {
+    border-bottom-color: transparent;
+    border-bottom-width: 0;
+    display: block;
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nv-list-item {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    line-height: inherit;
+    overflow: inherit;
+    padding: $space-default $space-sm;
+    position: relative;
+    text-decoration: inherit;
+    width: 100%;
+
+    &:not(last-child)::after {
+      // &::after {
+      background-color: rgba($default, 0.5);
+      bottom: 0;
+      content: '';
+      height: 1px;
+      left: 0;
+      margin: 0 $space-sm;
+      position: absolute;
+      width: calc(100% - #{$space-sm});
+    }
+
+    &.last-child::after {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0;
+      padding-left: 0;
+      width: 100%;
+    }
+
+  }
+
+  .nv-sub-header {
+    padding: $space-default $space-sm;
+  }
+  
+  .nv-list-header {
+    background-color: $white;
+    z-index: 2;
+  }
+
+  .nv-list-subject {
+    display: block;
+    font-family: 'FiraGO Bold';
+    margin-top: $space-sm;
+    white-space: pre-wrap;
+    width: 100%;
+  }
+
+  .nv-list-message {
+    color: $dark-gray;
+    margin-top: $space-sm;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &.nv-list-sticky-header {
+    .nv-list-header {
+      position: sticky;
+      top: 0;
+    } 
+  }
+
+  .nv-list-title-container {
+    align-items: center;
+    display: flex;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .nv-list-item-container {
+    align-items: center;
+    display: flex;
+    flex-direction: inherit;
+    min-width: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    time {
+      color: $dark-gray;
+      font-family: 'FiraGO Italic';
+      font-size: 12px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .nv-list-slot-end,
+  .nv-list-slot-start {
+    align-items: center;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
+
+    &:empty {
+      display: none;
+    }
+
+    img,
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .nv-list-slot-end {
+    margin-left: $space-default;
+  }
+
+  .nv-list-slot-start {
+    margin-right: $space-default;
+  }
+
+  .nv-avatar-slot {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: $space-sm;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &.nv-list-email-type {
+    .nv-list-item {
+      padding-left: $space-md;
+    }
+
+    .nv-list-title-container {
+      padding-right: 12px;
+    }
+
+    .nv-list-first-name,
+    .nv-list-last-name,
+    .nv-list-subject {
+      font-family: 'FiraGO Regular';
+    }
+  }
+
+  .nv-list-email-unread {
+    .nv-list-first-name,
+    .nv-list-last-name,
+    .nv-list-subject {
+      font-family: 'FiraGO Bold';
+    }
+
+    time {
+      color: $primary;
+    }
+  }
+
+  .unread-email-badge {
+    background-color: $primary;
+    border-radius: 50%;
+    height: 10px;
+    left: 6px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+  }
+}
+
+
+//
+// Native HTML List
+//
+
+ul {
+  padding-left: $space-md;
+
+  li {
+    margin: $space-sm 0;
+  }
+}

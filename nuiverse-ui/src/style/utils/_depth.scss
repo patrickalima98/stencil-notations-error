@@ -1,0 +1,95 @@
+/**
+* Copyright (c) 2018 The Nuinalp Authors. All rights reserved.
+* Use of this source code is governed by a BSD-style license that can be
+* found in the LICENSE file.
+*/
+
+// Shadows for create a depht effect
+
+// Default
+.nv-depth-0 { box-shadow: none; }
+.nv-depth-1 { box-shadow: 0 1px 1px rgba(0, 0, 0, 0.16); }
+.nv-depth-2 { box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16); }
+.nv-depth-4 { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16); }
+.nv-depth-6 { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
+.nv-depth-8 { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+.nv-depth-10 { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); }
+.nv-depth-12 { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
+.nv-depth-16 { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); }
+.nv-depth-26 { box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3); }
+.nv-depth-32 { box-shadow: 0 10px 32px rgba(0, 0, 0, 0.3); }
+.nv-depth-48 { box-shadow: 0 10px 48px rgba(0, 0, 0, 0.3); }
+.nv-depth-64 { box-shadow: 0 20px 64px rgba(0, 0, 0, 0.3); }
+.nv-depth-76 { box-shadow: 0 20px 76px rgba(0, 0, 0, 0.3); }
+.nv-depth-88 { box-shadow: 0 20px 88px rgba(0, 0, 0, 0.3); }
+
+// Top
+.nv-depth-0-top { box-shadow: none; }
+.nv-depth-1-top { box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3); }
+.nv-depth-2-top { box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.3); }
+.nv-depth-4-top { box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3); }
+.nv-depth-6-top { box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3); }
+.nv-depth-8-top { box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3); }
+.nv-depth-10-top { box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); }
+.nv-depth-12-top { box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3); }
+.nv-depth-16-top { box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.3); }
+.nv-depth-26-top { box-shadow: 0 -10px 26px rgba(0, 0, 0, 0.3); }
+.nv-depth-32-top { box-shadow: 0 -10px 32px rgba(0, 0, 0, 0.3); }
+.nv-depth-48-top { box-shadow: 0 -10px 48px rgba(0, 0, 0, 0.3); }
+.nv-depth-64-top { box-shadow: 0 -20px 64px rgba(0, 0, 0, 0.3); }
+.nv-depth-76-top { box-shadow: 0 -20px 76px rgba(0, 0, 0, 0.3); }
+.nv-depth-88-top { box-shadow: 0 -20px 88px rgba(0, 0, 0, 0.3); }
+
+// Center
+.nv-depth-0-center { box-shadow: none; }
+.nv-depth-1-center { box-shadow: 0 0 1px rgba(0, 0, 0, 0.3); }
+.nv-depth-2-center { box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); }
+.nv-depth-4-center { box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); }
+.nv-depth-6-center { box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); }
+.nv-depth-8-center { box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); }
+.nv-depth-10-center { box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+.nv-depth-12-center { box-shadow: 0 0 12px rgba(0, 0, 0, 0.3); }
+.nv-depth-16-center { box-shadow: 0 0 16px rgba(0, 0, 0, 0.3); }
+.nv-depth-26-center { box-shadow: 0 0 26px rgba(0, 0, 0, 0.3); }
+.nv-depth-32-center { box-shadow: 0 0 32px rgba(0, 0, 0, 0.3); }
+.nv-depth-48-center { box-shadow: 0 0 48px rgba(0, 0, 0, 0.3); }
+.nv-depth-64-center { box-shadow: 0 0 64px rgba(0, 0, 0, 0.3); }
+.nv-depth-76-center { box-shadow: 0 0 76px rgba(0, 0, 0, 0.3); }
+.nv-depth-88-center { box-shadow: 0 0 88px rgba(0, 0, 0, 0.3); }
+
+// Making shadow with color
+
+@each $themeName, $value in $theme-colors {
+  @if $themeName != 'link' and $themeName != 'dark' {
+    .nv-depth-1-#{$themeName} { box-shadow: 0 1px 1px $value; }
+    .nv-depth-2-#{$themeName} { box-shadow: 0 2px 2px $value; }
+    .nv-depth-4-#{$themeName} { box-shadow: 0 2px 4px $value; }
+    .nv-depth-6-#{$themeName} { box-shadow: 0 2px 6px $value; }
+    .nv-depth-8-#{$themeName} { box-shadow: 0 2px 4px $value; }
+    .nv-depth-10-#{$themeName} { box-shadow: 0 4px 10px $value; }
+    .nv-depth-12-#{$themeName} { box-shadow: 0 4px 12px $value; }
+    .nv-depth-16-#{$themeName} { box-shadow: 0 4px 16px $value; }
+    .nv-depth-26-#{$themeName} { box-shadow: 0 10px 26px $value; }
+    .nv-depth-32-#{$themeName} { box-shadow: 0 10px 32px $value; }
+    .nv-depth-48-#{$themeName} { box-shadow: 0 10px 48px $value; }
+    .nv-depth-64-#{$themeName} { box-shadow: 0 20px 64px $value; }
+    .nv-depth-76-#{$themeName} { box-shadow: 0 20px 76px $value; }
+    .nv-depth-88-#{$themeName} { box-shadow: 0 20px 88px $value; }
+
+    // Center
+    .nv-depth-1-center-#{$themeName} { box-shadow: 0 0 1px $value; }
+    .nv-depth-2-center-#{$themeName} { box-shadow: 0 0 2px $value; }
+    .nv-depth-4-center-#{$themeName} { box-shadow: 0 0 4px $value; }
+    .nv-depth-6-center-#{$themeName} { box-shadow: 0 0 6px $value; }
+    .nv-depth-8-center-#{$themeName} { box-shadow: 0 0 4px $value; }
+    .nv-depth-1-center0-#{$themeName} { box-shadow: 0 0 10px $value; }
+    .nv-depth-1-center2-#{$themeName} { box-shadow: 0 0 12px $value; }
+    .nv-depth-1-center6-#{$themeName} { box-shadow: 0 0 16px $value; }
+    .nv-depth-2-center6-#{$themeName} { box-shadow: 0 0 26px $value; }
+    .nv-depth-3-center2-#{$themeName} { box-shadow: 0 0 32px $value; }
+    .nv-depth-4-center8-#{$themeName} { box-shadow: 0 0 48px $value; }
+    .nv-depth-6-center4-#{$themeName} { box-shadow: 0 0 64px $value; }
+    .nv-depth-7-center6-#{$themeName} { box-shadow: 0 0 76px $value; }
+    .nv-depth-8-center8-#{$themeName} { box-shadow: 0 0 88px $value; }
+  }
+}
